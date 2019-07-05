@@ -4,9 +4,14 @@
 
   </app-header>
   <particles [params]="myParams" [style]="myStyle" ></particles>
-  <div class="img_text_div" fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="50px">
+  <div class="img_text_div"
+       fxLayout="row"
+       fxLayout.lt-md = "column "
+       fxLayoutAlign="space-around center"
+       fxLayoutAlign.lt-md="center center"
+       fxLayoutGap="50px">
     <div class="my_img">
-  <img class="my_logo"[src]="'/assets/images/home/sam.png'" alt="logo">
+  <img class="my_logo"[src]="'assets/images/home/sam.png'" alt="logo">
     </div>
     <div class="tex_div">
 

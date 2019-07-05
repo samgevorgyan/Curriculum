@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
   myStyle: object = {
     'width': '100%',
     'height': '100%',
-    'z-index': 1,
+    'z-index': 0,
     'top': 0,
     'left': 0,
     'right': 0,
@@ -41,9 +41,10 @@ export class HomeComponent implements OnInit {
         scale: [14,1],
         opacity: [0,1],
         easing: "easeOutCirc",
-        duration: 800,
+        duration: 1500,
+        start : 2000,
         delay: function(el, i) {
-          return 800 * i;
+          return 1000 * i;
         }
       })
   }

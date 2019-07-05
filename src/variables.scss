@@ -1,0 +1,114 @@
+//colors
+
+
+//fonts
+
+
+//sizes
+
+
+//static designes
+
+
+
+
+@mixin inputPlaceholder() {
+  $selector: '';
+  $prefixes: (
+    moz: "::-moz",
+    webkit: "::-webkit",
+    ie: ":-ms"
+  );
+  @each $prop, $value in $prefixes {
+    @if $prop != "moz" {
+      $selector: #{$value}-input-placeholder;
+    } @else {
+      $selector: #{$value}-placeholder;
+    }
+    @if & {
+      &#{$selector} {
+        @content;
+      }
+    } @else {
+      #{$selector} {
+        @content;
+      }
+    }
+  }
+  &::placeholder {
+    @content;
+  }
+}
+
+
+
+
+
+
+
+@mixin for-size($range) {
+  $s374: 374px;
+  $s599: 599px;
+  $s600: 600px;
+  $s959: 959px;
+  $s960: 960px;
+  $s1279: 1279px;
+  $s1280: 1280px;
+  $s1919: 1919px;
+  $s1920: 1920px;
+  $a5000: 5000px;
+
+  @if $range == xs {
+    @media (max-width: $s374) {
+      @content;
+    }
+  } @else if $range == sm {
+    @media (min-width: $s600) and (max-width: $s959) {
+      @content;
+    }
+  } @else if $range == md {
+    @media (min-width: $s960) and (max-width: $s1279) {
+      @content;
+    }
+  } @else if $range == lg {
+    @media (min-width: $s1280) and (max-width: $s1919) {
+      @content;
+    }
+  } @else if $range == xl {
+    @media (min-width: $s1920) and (max-width: $a5000) {
+      @content;
+    }
+  } @else if $range == lt-sm {
+    @media (max-width: $s599) {
+      @content;
+    }
+  } @else if $range == lt-md {
+    @media (max-width: $s959) {
+      @content;
+    }
+  } @else if $range == lt-lg {
+    @media (max-width: $s1279) {
+      @content;
+    }
+  } @else if $range == lt-xl {
+    @media (max-width: $s1919) {
+      @content;
+    }
+  } @else if $range == gt-xs {
+    @media (min-width: $s600) {
+      @content;
+    }
+  } @else if $range == gt-sm {
+    @media (min-width: $s960) {
+      @content;
+    }
+  } @else if $range == gt-md {
+    @media (min-width: $s1280) {
+      @content;
+    }
+  } @else if $range == gt-lg {
+    @media (min-width: $s1920) {
+      @content;
+    }
+  }
+}
