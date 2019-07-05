@@ -1,0 +1,49 @@
+.sidenav-container {
+  overflow: initial!important;
+  height: 100%;
+  background: transparent;
+  color: white;
+  .mat-drawer-backdrop{
+    height: 100vh;
+    position: fixed;
+  }
+
+  .sidenav {
+
+    .mat-toolbar {
+      background-image: url("../../../assets/images/home/header.jpg");
+      color: white;
+      height: auto;
+      padding: 10px 10px;
+
+      .my_logo{
+        width: 126px;
+        height: 150px;
+        border-radius: 50%;
+      }
+      .name_surname{
+        color: lime;
+      }
+
+    }
+  }
+  .mat-drawer-content{
+    .mat-toolbar{
+
+background: transparent;
+      color: white;
+.links_div{
+ margin-left: auto;
+  a{
+    text-decoration: none;
+    color: white;
+  }
+
+}
+
+    }
+
+  }
+
+}
+

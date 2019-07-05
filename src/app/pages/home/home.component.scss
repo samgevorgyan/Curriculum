@@ -1,5 +1,33 @@
 .main_content{
-  background-color: blue;
-  width: 500px;
-  height: 600px;
+  background-image: url("../../../assets/images/home/home_universe.jpg");
+  width: 100%;
+  .img_text_div{
+    padding: 20px;
+    .my_img{
+      .my_logo {
+        width: 400px;
+        height: 445px;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+      }
+    }
+.tex_div{
+  color: white;
+  font-size: 22px;
+
+}
+
+  }
+}
+.ml15 {
+  font-weight: 800;
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.ml15 .word {
+  display: inline-block;
+  line-height: 1em;
 }
