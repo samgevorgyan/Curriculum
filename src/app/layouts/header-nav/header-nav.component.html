@@ -4,7 +4,7 @@
       [mode]=" 'over'"
      >
     <mat-toolbar fxLayout="column">
-      <img class="my_logo"[src]="'/assets/images/home/sam.png'" alt="logo">
+      <img class="my_logo"[src]="'assets/images/home/sam.png'" alt="logo">
     <p class="name_surname">SAMVEL GEVORGYAN</p>
     </mat-toolbar>
     <div>
@@ -26,7 +26,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Culicurum</span>
+      <span>Curriculum</span>
       <div class="links_div" fxLayout="row" fxLayoutGap="15px" *ngIf="!(isHandset$ | async)" >
         <a mat-list-item href="#">Link 1</a>
         <a mat-list-item href="#">Link 2</a>
