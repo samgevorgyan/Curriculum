@@ -2,8 +2,11 @@
 .main_content{
   background-image: url("../../../assets/images/home/home_universe.jpg");
   width: 100%;
+  min-height: 800px;
+  position: relative;
   .img_text_div{
     padding: 20px;
+
     .my_img{
       .my_logo {
         width: 400px;

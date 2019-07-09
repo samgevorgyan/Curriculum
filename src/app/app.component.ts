@@ -9,14 +9,4 @@ export class AppComponent {
   title = 'Curriculum';
 }
 
-if (typeof Worker !== 'undefined') {
-  // Create a new
-  const worker = new Worker('./app.worker', { type: 'module' });
-  worker.onmessage = ({ data }) => {
-    console.log(`page got mesdddddddddddddsage: ${data}`);
-  };
-  worker.postMessage('hellerefsefwefo');
-} else {
-  // Web Workers are not supported in this environment.
-  // You should add a fallback so that your program still executes correctly.
-}
+
