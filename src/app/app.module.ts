@@ -32,7 +32,7 @@ import { HomeAboutComponent } from './pages/home-about/home-about.component';
     AppMaterialModule,
     ParticlesModule,
     FlexLayoutModule,
-    AnimateOnScrollModule.forRoot()
+
 
   ],
   providers: [],
