@@ -10,10 +10,12 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 
+
 import {HomeComponent} from './pages/home/home.component';
 import {HeaderNavComponent} from './layouts/header-nav/header-nav.component';
 import {HeaderComponent} from './layouts/header/header.component';
 import { HomeAboutComponent } from './pages/home-about/home-about.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,7 @@ import { HomeAboutComponent } from './pages/home-about/home-about.component';
     AppMaterialModule,
     ParticlesModule,
     FlexLayoutModule,
+    AnimateOnScrollModule.forRoot()
 
   ],
   providers: [],

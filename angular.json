@@ -28,11 +28,14 @@
               "src/404.html"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/animate.css/animate.min.css",
+              "node_modules/aos/src/sass/aos.scss"
             ],
-            "scripts": [],
-            "webWorkerTsConfig": "tsconfig.worker.json"
+            "scripts": [
 
+            ],
+            "webWorkerTsConfig": "tsconfig.worker.json"
           },
           "configurations": {
             "production": {
@@ -122,6 +125,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "Curriculum"
 }
