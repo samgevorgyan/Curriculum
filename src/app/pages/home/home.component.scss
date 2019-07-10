@@ -1,49 +1,59 @@
 @import "../../../variables";
-.main_content{
-  background-image: url("../../../assets/images/home/home_universe.jpg");
-  width: 100%;
-  min-height: 800px;
-  position: relative;
-  .img_text_div{
-    padding: 20px;
 
-    .my_img{
-      .my_logo {
-        width: 400px;
-        height: 445px;
-        border-radius: 50%;
-        position: relative;
-        @include for-size(md){
-          width: 300px;
-          height: 335px;
-        }
-        @include for-size(lt-sm){
-          width: 200px;
-          height: 235px;
+.main_content {
+
+  width: 100%;
+
+
+  .first_part {
+    background-image: url("../../../assets/images/home/home_universe.jpg");
+    width: 100%;
+    min-height: 800px;
+    position: relative;
+    .img_text_div {
+      padding: 20px;
+
+      .my_img {
+        .my_logo {
+          width: 400px;
+          height: 445px;
+          border-radius: 50%;
+          position: relative;
+          @include for-size(md) {
+            width: 300px;
+            height: 335px;
+          }
+          @include for-size(lt-sm) {
+            width: 200px;
+            height: 235px;
+          }
         }
       }
-    }
-.tex_div{
-  color: white;
-  font-size: 22px;
-  .ml15 {
-    font-weight: 800;
-    font-size: 35px;
-    text-transform: uppercase;
-    letter-spacing: 0.5em;
-    @include for-size(lt-sm){
-      text-align: center;
-      letter-spacing: 0.4em;
+
+      .tex_div {
+        color: white;
+        font-size: 22px;
+
+        .ml15 {
+          font-weight: 800;
+          font-size: 35px;
+          text-transform: uppercase;
+          letter-spacing: 0.5em;
+          @include for-size(lt-md) {
+            text-align: center;
+            letter-spacing: 0.4em;
+
+          }
+
+          .word {
+            display: inline-block;
+            line-height: 1em;
+          }
+        }
+
+      }
 
     }
-    .word {
-      display: inline-block;
-      line-height: 1em;
-    }
-  }
-
-}
-
   }
 }
 

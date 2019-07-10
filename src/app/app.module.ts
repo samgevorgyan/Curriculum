@@ -15,6 +15,8 @@ import {HomeComponent} from './pages/home/home.component';
 import {HeaderNavComponent} from './layouts/header-nav/header-nav.component';
 import {HeaderComponent} from './layouts/header/header.component';
 import { HomeAboutComponent } from './pages/home-about/home-about.component';
+import { HomeSkillsComponent } from './pages/home-skills/home-skills.component';
+import {NgCircleProgressModule} from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { HomeAboutComponent } from './pages/home-about/home-about.component';
     HeaderNavComponent,
     HeaderComponent,
     HomeAboutComponent,
+    HomeSkillsComponent,
 
   ],
   imports: [
@@ -32,7 +35,14 @@ import { HomeAboutComponent } from './pages/home-about/home-about.component';
     AppMaterialModule,
     ParticlesModule,
     FlexLayoutModule,
-
+    NgCircleProgressModule.forRoot({
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+    })
 
   ],
   providers: [],

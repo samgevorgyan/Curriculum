@@ -1,0 +1,90 @@
+<div class="skills_content">
+  <div class="html_css"  id="trigger-html" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center center"
+  >
+
+    <div class="standart" data-aos="zoom-in-up"
+         data-aos-id="html5"
+         data-aos-delay="50"
+         id="trigger-css"
+         data-aos-anchor="#trigger-html"
+         data-aos-anchor-placement="top-bottom"
+    >
+      <circle-progress
+        *ngIf="show_circle_html5"
+        [options]="ngCircleOptions"
+        [percent]=85
+        [subtitle]="'HTML 5'"
+
+      ></circle-progress>
+    </div>
+
+    <div class="standart" data-aos="zoom-in-up"
+         data-aos-id="css3"
+         data-aos-delay="50"
+         id="trigger-js"
+         data-aos-anchor="#trigger-css"
+         data-aos-anchor-placement="top-center">
+
+      <circle-progress
+        *ngIf="show_circle_css3"
+        [options]="ngCircleOptions"
+        [percent]=85
+        [subtitle]="'CSS 3'"
+      ></circle-progress>
+    </div>
+
+
+    <div class="standart" data-aos="zoom-in-up"
+         data-aos-id="js"
+         data-aos-delay="50"
+         id="trigger-angular"
+         data-aos-anchor="#trigger-js"
+         data-aos-anchor-placement="top-center"
+    >
+
+      <circle-progress
+        *ngIf="show_circle_js"
+        [options]="ngCircleOptions"
+        [percent]=75
+        [subtitle]="'JAVASCRIPT'"
+      ></circle-progress>
+    </div>
+
+
+    <div class="standart" data-aos="zoom-in-up"
+         data-aos-id="angular"
+         data-aos-delay="50"
+         id="trigger-php"
+         data-aos-anchor="#trigger-angular"
+         data-aos-anchor-placement="top-center"
+    >
+
+      <circle-progress
+        *ngIf="show_circle_angular"
+        [options]="ngCircleOptions"
+        [percent]=75
+        [subtitle]="'ANGULAR'"
+
+      ></circle-progress>
+    </div>
+
+    <div class="standart" data-aos="zoom-in-up"
+         data-aos-id="php"
+         data-aos-delay="50"
+         data-aos-anchor="#trigger-php"
+         data-aos-anchor-placement="top-center"
+    >
+
+      <circle-progress
+        *ngIf="show_circle_php"
+        [options]="ngCircleOptions"
+        [percent]=30
+        [subtitle]="'PHP'"
+
+      ></circle-progress>
+    </div>
+
+
+  </div>
+</div>
+<div style="height: 500px"></div>

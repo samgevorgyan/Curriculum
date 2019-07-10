@@ -1,28 +1,33 @@
 
-<div class="main_content">
-  <app-header>
+<div class="main_content" >
+  <div class="first_part">
 
-  </app-header>
-  <particles [params]="myParams" [style]="myStyle" ></particles>
-  <div class="img_text_div"
-       fxLayout="row"
-       fxLayout.lt-md = "column "
-       fxLayoutAlign="space-around center"
-       fxLayoutAlign.lt-md="center center"
-       fxLayoutGap="50px">
-    <div class="my_img">
-  <img class="my_logo"[src]="'assets/images/home/sam.png'" alt="logo">
-    </div>
-    <div class="tex_div">
+    <app-header>
 
-      <h3 class="ml15">
-        <span class="word">Sometimes  diligence and devotion </span>
-        <span class="word">are more than talent</span>
-      </h3>
+    </app-header>
+    <particles [params]="myParams" [style]="myStyle" ></particles>
+    <div class="img_text_div"
+         fxLayout="row"
+         fxLayout.lt-md = "column "
+         fxLayoutAlign="space-around center"
+         fxLayoutAlign.lt-md="center center"
+         fxLayoutGap="50px">
+      <div class="my_img">
+        <img class="my_logo"[src]="'assets/images/home/sam.png'" alt="logo">
+      </div>
+      <div class="tex_div">
+
+        <h3 class="ml15">
+          <span class="word">Sometimes  diligence and devotion </span>
+          <span class="word">are more than talent</span>
+        </h3>
+      </div>
     </div>
   </div>
 
 
+  <app-home-about></app-home-about>
+  <app-home-skills></app-home-skills>
 </div>
 
-<app-home-about></app-home-about>
+
