@@ -1,0 +1,16 @@
+@import "../../../variables";
+
+.education_main_cont {
+
+min-height: calc(100% - 190px);
+  background-color: lime;
+  .example-card {
+    max-width: 800px;
+    min-width: 250px;
+    background-color: #31e8f138;
+
+    @include for-size(lt-sm) {
+      margin-left: 0;
+    }
+  }
+}

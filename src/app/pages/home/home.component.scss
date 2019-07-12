@@ -4,7 +4,10 @@
 
   width: 100%;
 
-
+  app-header app-header-nav .sidenav-container {
+    background: transparent;
+    color: white;
+  }
   .first_part {
     background-image: url("../../../assets/images/home/home_universe.jpg");
     width: 100%;

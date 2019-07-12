@@ -19,8 +19,9 @@ import { HomeAboutComponent } from './pages/home-about/home-about.component';
 import { HomeSkillsComponent } from './pages/home-skills/home-skills.component';
 import {NgCircleProgressModule} from 'ng-circle-progress';
 import { HomeExperienceComponent } from './pages/home-experience/home-experience.component';
-import { HomeEducationComponent } from './pages/home-education/home-education.component';
-import { FooterComponent } from './pages/layouts/footer/footer.component';
+import { HomeJobsComponent } from './pages/home-jobs/home-jobs.component';
+import { FooterComponent } from './layouts/footer/footer.component';
+import { EducationComponent } from './pages/education/education.component';
 
 
 @NgModule({
@@ -32,8 +33,9 @@ import { FooterComponent } from './pages/layouts/footer/footer.component';
     HomeAboutComponent,
     HomeSkillsComponent,
     HomeExperienceComponent,
-    HomeEducationComponent,
+    HomeJobsComponent,
     FooterComponent,
+    EducationComponent,
 
   ],
   imports: [
