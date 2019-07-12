@@ -1,0 +1,68 @@
+@import "../../../variables";
+
+.education_cont {
+  padding: 50px;
+  font-family: 'Playfair Display', serif;
+
+  h1 {
+    color: white;
+  }
+  a{
+    text-decoration: none ;
+  }
+
+
+  .cards {
+
+    .example-card {
+      max-width: 400px;
+      min-width: 250px;
+      background-color: #31e8f138;
+      margin-bottom: 25px;
+      @include for-size(lt-sm){
+        margin-left: 0;
+      }
+
+
+      .vshoo_image {
+        background-image: url('../../../assets/images/home/vshoo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .connecttotv_image {
+        background-image: url('../../../assets/images/home/connecttotv_logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100px;
+      }
+
+      .my_cash_image {
+        background-image: url('../../../assets/images/home/logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 50px;
+      }
+      .wallet_image {
+        background-image: url('../../../assets/images/home/wallet.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100px;
+      }
+
+      .sec_image {
+        background-image: url('../../../assets/images/home/sec.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+
+      }
+      .mat_content_p {
+        color: white;
+        line-height: 1.3rem;
+      }
+    }
+  }
+
+
+}
+

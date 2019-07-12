@@ -55,6 +55,22 @@
 
     }
   }
+
+  .experience_education{
+    background-image: url("../../../assets/images/home/Blur-Picture9.jpg");
+    //background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+  }
 }
 
 

@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppMaterialModule} from './app-material.module';
 import {ParticlesModule} from 'angular-particle';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {ParallaxScrollModule} from 'ng2-parallaxscroll';
 
 
 
@@ -17,6 +18,10 @@ import {HeaderComponent} from './layouts/header/header.component';
 import { HomeAboutComponent } from './pages/home-about/home-about.component';
 import { HomeSkillsComponent } from './pages/home-skills/home-skills.component';
 import {NgCircleProgressModule} from 'ng-circle-progress';
+import { HomeExperienceComponent } from './pages/home-experience/home-experience.component';
+import { HomeEducationComponent } from './pages/home-education/home-education.component';
+import { FooterComponent } from './pages/layouts/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +31,9 @@ import {NgCircleProgressModule} from 'ng-circle-progress';
     HeaderComponent,
     HomeAboutComponent,
     HomeSkillsComponent,
+    HomeExperienceComponent,
+    HomeEducationComponent,
+    FooterComponent,
 
   ],
   imports: [
@@ -42,7 +50,8 @@ import {NgCircleProgressModule} from 'ng-circle-progress';
       outerStrokeColor: "#78C000",
       innerStrokeColor: "#C7E596",
       animationDuration: 300,
-    })
+    }),
+    ParallaxScrollModule,
 
   ],
   providers: [],
