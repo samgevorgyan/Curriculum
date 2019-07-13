@@ -2,10 +2,25 @@
 
 .education_main_cont {
   font-family: 'Playfair Display', serif;
-  min-height: calc(100% - 140px);
+  min-height: calc(100% - 180px);
 background-image: url("../../../assets/images/home/Yellow-and-Blue73.jpg");
   padding: 20px;
+h1{
+  color: $education_blue;
+  letter-spacing: 0.3rem;
+  font-weight: bold;
+  position: relative;
 
+
+  &:after{
+    content: '';
+    width: 60px;
+    border: 2px solid $skills_blue;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
   .education_part {
     .resume_item {
       position: relative;
@@ -59,7 +74,7 @@ background-image: url("../../../assets/images/home/Yellow-and-Blue73.jpg");
   }
   .language_skills{
     .card_box_parent {
-margin-bottom: 20px;
+margin-bottom: 40px;
       .title{
         padding-left: 10px;
         font-size: 25px;
