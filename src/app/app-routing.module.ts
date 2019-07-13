@@ -4,8 +4,8 @@ import {HomeComponent} from "./pages/home/home.component";
 import {EducationComponent} from './pages/education/education.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'education', component: EducationComponent },
+  { path: 'home', component: HomeComponent, data: {animation: 'HomePage'} },
+  { path: 'education', component: EducationComponent , data: {animation: 'EducationPage'}},
   { path: '',  redirectTo: '/home',  pathMatch: 'full' },
   { path: '**', component: HomeComponent }];
 
