@@ -1,5 +1,7 @@
 //colors
-
+$education_blue : #2b1df2;
+$skills_blue : #2b1df2;
+$skills_background_blue : #2b1df24a;
 
 //fonts
 
@@ -11,7 +13,31 @@
 
 
 
+@mixin animation_width($name ,$width){
 
+  animation-name: $name ;
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -moz-animation-duration: 4s;
+  -o-animation-duration: 4s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  @-webkit-keyframes #{$name} {
+    from {width: 0}
+    to {width: $width}
+  }
+  @keyframes #{$name} {
+    from {width: 0}
+    to {width: $width}
+  }
+  @-moz-keyframes #{$name}{
+    from {width: 0}
+    to {width: $width}
+  }
+  @-ms-keyframes #{$name} {
+    from {width: 0}
+    to {width: $width}
+  }
+}
 @mixin inputPlaceholder() {
   $selector: '';
   $prefixes: (

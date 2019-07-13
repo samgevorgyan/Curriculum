@@ -1,16 +1,151 @@
 @import "../../../variables";
 
 .education_main_cont {
+  font-family: 'Playfair Display', serif;
+  min-height: calc(100% - 190px);
+background-image: url("../../../assets/images/home/Yellow-and-Blue73.jpg");
+  padding: 20px;
 
-min-height: calc(100% - 190px);
-  background-color: lime;
-  .example-card {
-    max-width: 800px;
-    min-width: 250px;
-    background-color: #31e8f138;
+  .education_part {
+    .resume_item {
+      position: relative;
+      padding: 0 30px 40px;
 
-    @include for-size(lt-sm) {
-      margin-left: 0;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: $education_blue;
+      }
+
+      .date {
+        position: relative;
+        top: -10px;
+        margin: 0 0 5px;
+        display: inline-block;
+        padding: 0 5px;
+        height: 20px;
+        line-height: 18px;
+        font-weight: bold;
+        width: 150px;
+        text-align: center;
+        font-size: 16px;
+        color: $education_blue;
+        border: 1px solid $education_blue;
+
+        &:before {
+          content: '';
+          width: 29px;
+          height: 1px;
+          position: absolute;
+          left: -30px;
+          top: 9px;
+          background: $education_blue;
+        }
+      }
+
+      .name {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      p {
+        padding-left: 30px;
+      }
     }
   }
+  .language_skills{
+    .card_box_parent {
+
+      .title{
+        padding-left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        span{
+          color: $education_blue;
+        }
+      }
+
+      .card_box {
+        position: relative;
+        padding: 30px;
+        max-width: 400px;
+        min-width: 200px;
+        background: #ffffffc9;
+        box-shadow: 0 0 50px rgba(0, 0, 0, .5);
+        -moz-box-shadow: 0 0 50px rgba(0, 0, 0, .5);
+        -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, .5);
+        -khtml-box-shadow: 0 0 50px rgba(0, 0, 0, .5);
+        border-radius: 18px;
+        -moz-border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -khtml-border-radius: 18px;
+
+
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          line-height: 1.3rem;
+
+          li {
+            margin-bottom: 20px;
+
+
+            .name {
+              margin: 0 0 10px 0;
+              font-size: 20px;
+              line-height: 14px;
+              color: black;
+              font-weight: 700;
+            }
+
+            .progress {
+              position: relative;
+              display: block;
+              width: 100%;
+              height: 6px;
+              background: $skills_background_blue;
+
+              .percentage {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                background: $skills_blue;
+
+              }
+              .p_1{
+                @include animation_width(p_1,70%)
+              }
+              .p_2,.l_3{
+                @include animation_width(p_2,80%)
+              }
+              .p_3{
+                @include animation_width(p_3,90%)
+              }
+              .p_1,.l_1{
+                @include animation_width(p_1,70%)
+              }
+              .l_2{
+                @include animation_width(l_2,50%)
+              }
+
+              .l_4{
+                @include animation_width(l_4,98%)
+              }
+
+
+            }
+          }
+        }
+      }
+    }
+
+
+  }
 }
+
