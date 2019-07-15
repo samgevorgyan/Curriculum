@@ -2,6 +2,7 @@
 
 *.js
 dist/
+
 /bazel-out
 /integration/bazel/bazel-*
 e2e_test.*
