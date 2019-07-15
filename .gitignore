@@ -10,6 +10,7 @@ tools/gulp-tasks/cldr/cldr-data/
 # Include when developing application packages.
 pubspec.lock
 .c9
+.idea/
 .devcontainer/*
 !.devcontainer/recommended-devcontainer.json
 !.devcontainer/recommended-Dockerfile
