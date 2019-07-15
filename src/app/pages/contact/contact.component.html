@@ -1,0 +1,98 @@
+<app-header></app-header>
+<div class="contact_cont" fxLayout="row wrap" fxLayout.lt-sm="column" fxFlexAlign="center center">
+
+  <div class="info_email" fxLayout="column" fxFlexAlign="center center" fxLayoutGap="30px">
+    <div class="get_in_touch" fxLayout="column" fxLayoutGap="30px">
+      <h1><span>Get </span>in Touch </h1>
+      <div fxLayout="row" fxFlexAlign="center center" fxLayoutGap="30px">
+        <div fxLayout="column" fxFlexAlign="center center" fxLayoutGap="30px">
+          <mat-card class="card">
+            <mat-card-content fxLayout="row" fxFlexAlign="center center">
+          <span fxFlexAlign="center">
+         <i class="material-icons"> phone_android </i>
+            </span>
+              <p class="mat_content_p">
+                <span>Phone</span> <br/>
+                +34 655688527
+              </p>
+            </mat-card-content>
+
+          </mat-card>
+          <mat-card class="card">
+            <mat-card-content fxLayout="row" fxFlexAlign="center center">
+          <span fxFlexAlign="center">
+         <i class="material-icons"> alternate_email </i>
+            </span>
+              <p class="mat_content_p">
+                <span>Email</span> <br/>
+                samvelgevorgyan87@gmail.com
+              </p>
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <div fxLayout="column" fxFlexAlign="center center" fxLayoutGap="30px">
+          <mat-card class="card">
+            <mat-card-content fxLayout="row" fxFlexAlign="center center">
+          <span fxFlexAlign="center">
+         <i class="material-icons"> check_box </i>
+            </span>
+              <p class="mat_content_p">
+                <span>Freelance</span> <br/>
+                Available
+              </p>
+            </mat-card-content>
+
+          </mat-card>
+          <mat-card class="card">
+            <mat-card-content fxLayout="row" fxFlexAlign="center center">
+     <span>
+
+ <a href="https://www.linkedin.com/in/samvel-gevorgyan-35018a121" target="_blank"> <fa-icon [icon]="['fab', 'linkedin']"
+                                                                                            size="xs"></fa-icon></a>
+            </span>
+              <span>
+
+ <a href="https://join.skype.com/invite/pGFOZ4ERRsxl" target="_blank"> <fa-icon [icon]="['fab', 'skype']"
+                                                                                size="xs"></fa-icon></a>
+            </span>
+              <span>
+
+ <a href="https://t.me/SamGevorgyan" target="_blank"> <fa-icon [icon]="['fab', 'telegram']"
+                                                               size="xs"></fa-icon></a>
+            </span>
+              <span>
+
+ <a href="https://twitter.com/Samvel1987" target="_blank"> <fa-icon [icon]="['fab', 'twitter-square']"
+                                                                    size="xs"></fa-icon></a>
+            </span>
+
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="contact_form_div"   >
+      <form  class="contact_form" [formGroup]="sendMessage" (ngSubmit)="onSubmit()"
+        fxLayout="column" fxFlexAlign="center center" fxLayoutGap="30px">
+        <input type="text" formControlName="name_form" placeholder="Full Name">
+        <input type="email" formControlName="email_form" placeholder="Email address">
+        <textarea formControlName="message_form" name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+
+        <button mat-raised-button color="primary">Send message</button>
+      </form>
+    </div>
+  </div>
+  <div class="chat_parent">
+    <div>
+
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

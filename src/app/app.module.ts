@@ -8,6 +8,11 @@ import {AppMaterialModule} from './app-material.module';
 import {ParticlesModule} from 'angular-particle';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {ParallaxScrollModule} from 'ng2-parallaxscroll';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {fas} from '@fortawesome/free-solid-svg-icons';
+import {far} from '@fortawesome/free-regular-svg-icons';
+import {fab} from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -22,7 +27,11 @@ import { HomeExperienceComponent } from './pages/home-experience/home-experience
 import { HomeJobsComponent } from './pages/home-jobs/home-jobs.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { EducationComponent } from './pages/education/education.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+
+library.add(fas,far, fab);
 
 @NgModule({
   declarations: [
@@ -36,12 +45,15 @@ import { EducationComponent } from './pages/education/education.component';
     HomeJobsComponent,
     FooterComponent,
     EducationComponent,
+    ContactComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppMaterialModule,
     ParticlesModule,
     FlexLayoutModule,
@@ -54,6 +66,7 @@ import { EducationComponent } from './pages/education/education.component';
       animationDuration: 300,
     }),
     ParallaxScrollModule,
+    FontAwesomeModule
 
   ],
   providers: [],

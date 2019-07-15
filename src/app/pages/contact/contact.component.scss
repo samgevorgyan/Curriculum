@@ -1,0 +1,64 @@
+@import "../../../variables";
+.contact_cont{
+  min-height: calc(100% - 140px);
+  background-image: url("../../../assets/images/home/Korea-Wallpaper25.jpg");
+  background-size: 100% 100% ;
+  background-repeat: no-repeat;
+
+  .info_email{
+    padding: 20px;
+    .get_in_touch{
+
+
+      h1{
+        span{
+          color: $skills_blue;
+          font-weight: 900;
+        }
+      }
+      .card{
+        height: 50px;
+        width: 300px;
+        a{
+          text-decoration: none;
+          color: $skills_blue;
+
+        }
+        span {
+          color: $skills_blue;
+          margin-right: 10px;
+          fa-icon{
+          font-size: 50px;
+        }
+        }
+        .mat_content_p {
+margin: 0;
+          line-height: 1.3rem;
+        }
+      }
+    }
+    .contact_form_div{
+
+      .contact_form{
+padding: 16px;
+        input{
+          width: 300px;
+          height: 30px;
+          padding: 5px;
+        }
+        textarea{
+          width: 300px;
+
+        }
+button{
+  width: 150px;
+
+}
+      }
+    }
+  }
+  .chat_parent{
+
+  }
+
+}
