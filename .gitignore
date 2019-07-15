@@ -1,6 +1,6 @@
 .DS_STORE
 
-server/**/*.js
+server/src/**/*.js
 dist/
 /bazel-out
 /integration/bazel/bazel-*
