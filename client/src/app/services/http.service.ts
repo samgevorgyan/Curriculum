@@ -94,7 +94,7 @@ export class HttpService {
     } else {
       // The backend returned an unsuccessful response code.
       // The response body may contain clues as to what went wrong,
-      console.log(
+      console.error(
         `Backend returned code ${error.status}, ` +
         `body was: ${error.error.status}`);
     }

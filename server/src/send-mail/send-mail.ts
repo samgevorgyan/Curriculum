@@ -39,7 +39,7 @@ ${obj.msg}
        port: 587,
        auth: {
            user: "samvelgevorgyan87@gmail.com",
-           pass: "asatur7790d9"
+           pass: "asatur77909"
        },
        tls:{
            rejectUnauthorized:false,
