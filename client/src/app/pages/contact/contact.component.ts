@@ -37,7 +37,8 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    const url = 'http://localhost:3000/mail';
+    const url = 'https://curriculumj.herokuapp.com/mail';
+    // const url = 'http://localhost:3000/mail';
     const data = {
       name : this.name_form.value,
       email : this.email_form.value,
