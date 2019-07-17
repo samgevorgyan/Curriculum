@@ -29,9 +29,12 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { EducationComponent } from './pages/education/education.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpService} from "./services/http.service";
+import {ConvertToHttpParamsService} from "./services/convert-to-http-params.service";
+import {HttpClientModule} from "@angular/common/http";
 
 
-library.add(fas,far, fab);
+library.add(fas, far, fab);
 
 @NgModule({
   declarations: [
@@ -52,6 +55,7 @@ library.add(fas,far, fab);
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     AppMaterialModule,
@@ -61,15 +65,18 @@ library.add(fas,far, fab);
       radius: 100,
       outerStrokeWidth: 16,
       innerStrokeWidth: 8,
-      outerStrokeColor: "#78C000",
-      innerStrokeColor: "#C7E596",
+      outerStrokeColor: '#78C000',
+      innerStrokeColor: '#C7E596',
       animationDuration: 300,
     }),
     ParallaxScrollModule,
     FontAwesomeModule
 
   ],
-  providers: [],
+  providers: [
+    HttpService,
+    ConvertToHttpParamsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
