@@ -2,9 +2,12 @@
 
 .contact_cont{
   min-height: calc(100% - 140px);
-  background-image: url("../../../assets/images/home/Korea-Wallpaper25.jpg");
-  background-size: 100% 100% ;
-  background-repeat: no-repeat;
+  background-image: url("../../../assets/images/home/contact1.jpg");
+  background-size: contain;
+  @include for-size(lt-md){
+    background-size: cover;
+  }
+
 
   .info_email{
     padding: 20px;
@@ -16,12 +19,17 @@
 
       h1{
         text-align: right;
-        @include for-size(lt-md){
+        @include for-size(lt-lg){
        text-align: left;
         }
-        span{
+        span:nth-child(1){
           color: $education_blue;
           font-weight: 900;
+        }
+        span:nth-child(2){
+          @include for-size(lt-md){
+            color: white;
+          }
         }
       }
       .card{

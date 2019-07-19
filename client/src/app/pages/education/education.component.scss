@@ -3,7 +3,8 @@
 .education_main_cont {
   font-family: 'Playfair Display', serif;
   min-height: calc(100% - 180px);
-background-image: url("../../../assets/images/home/Yellow-and-Blue73.jpg");
+background-image: url("../../../assets/images/home/education1.jpg");
+  background-size: contain  ;
   padding: 20px;
 h1{
   color: $education_blue;

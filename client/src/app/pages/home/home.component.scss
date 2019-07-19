@@ -10,6 +10,7 @@ overflow-x: hidden;
   }
   .first_part {
     background-image: url("../../../assets/images/home/home_universe.jpg");
+    background-size: cover;
     width: 100%;
     min-height: 800px;
     position: relative;
@@ -60,9 +61,15 @@ overflow-x: hidden;
   }
 
   .experience_education{
-    background-image: url("../../../assets/images/home/Blur-Picture9.jpg");
-    //background-repeat: no-repeat;
+    background-image: url("../../../assets/images/home/background1.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
+    @include for-size(lt-sm){
+      background-image: url("../../../assets/images/home/homeEducationMobile.gif");
+      background-size: contain;
+      background-repeat: repeat;
+    }
+
 
   }
   ::-webkit-scrollbar {

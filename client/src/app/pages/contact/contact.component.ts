@@ -63,12 +63,13 @@ export class ContactComponent implements OnInit {
       };
 
       this.httpService.postData(url, data, (resp) => {
-        console.log('ekav nodeic arajin angam kyanqum  uraaaaaaaaa', resp);
+
         this.openSnackBar();
         this.showSpinner = false;
+        this.sendMessage.reset();
       }, (error) => {
         this.showSpinner = false;
-        console.log('ekav  errorerrorerrorerrorerrorerror ', error);
+
       });
     } else {
       this.isSubmitted = true;
