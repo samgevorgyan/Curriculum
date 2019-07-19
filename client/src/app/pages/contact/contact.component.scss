@@ -66,12 +66,17 @@ padding: 16px;
         textarea{
           width: 320px;
           padding: 5px;
+          border-radius: 4px;
+          border: none;
 
         }
 button{
   width: 150px;
   background-color: $education_blue ;
-
+  .spinner{
+    display: inline;
+    margin-left: 10px;
+  }
   @include for-size(lt-sm){
     width: 325px;
   }
@@ -85,6 +90,8 @@ button{
   }
 
 }
+
+
 ::ng-deep {
   .blue-snackbar{
     background-color: #00c853;
@@ -102,15 +109,7 @@ button{
     }
   }
 
-  .mat-form-field-label {
-    color: $education_blue !important;
-    // color: $mainColor!important;
-  }
 
-  .mat-form-field.mat-focused .mat-form-field-label {
-    color: $skills_blue !important;
-    font-weight: 900;
-  }
 }
 
 

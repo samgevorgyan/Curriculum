@@ -12,6 +12,7 @@ import {
 import {LayoutModule} from '@angular/cdk/layout';
 import {MatCardModule} from '@angular/material/card';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [],
@@ -26,7 +27,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatProgressSpinnerModule
 
   ],
   exports: [
@@ -39,7 +41,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatProgressSpinnerModule
 
   ]
 })

@@ -93,7 +93,7 @@
         <textarea formControlName="message_form" name="" id="" cols="30" rows="10"
                   placeholder="Your message"></textarea>
         <div class="error_field" *ngIf="message_form.touched && message_form.errors?.required  || message_form.errors?.required  && isSubmitted">The message field is required</div>
-        <button mat-raised-button color="primary">Send message</button>
+        <button mat-raised-button color="primary" >Send mesend   <mat-spinner *ngIf="showSpinner" class="spinner" diameter="20"></mat-spinner></button>
       </form>
 
 
@@ -105,6 +105,9 @@
   <!--ashot-->
   <!--    </div>-->
   <!--  </div>-->
+
+
+
 </div>
 
 <app-footer></app-footer>

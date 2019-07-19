@@ -18,6 +18,7 @@ export class ContactComponent implements OnInit {
     message_form: ['', [Validators.required]],
   });
   public isSubmitted = false;
+  public showSpinner = false;
 
   constructor(private fb: FormBuilder,
               private httpService: HttpService,
@@ -59,6 +60,7 @@ export class ContactComponent implements OnInit {
     const url = `${environment.main_url}/mail`;
 
     if (this.name_form.value && this.email_form.value && this.message_form.value) {
+      this.showSpinner = true;
       const data = {
         name: this.name_form.value,
         email: this.email_form.value,
@@ -68,9 +70,9 @@ export class ContactComponent implements OnInit {
       this.httpService.postData(url, data, (resp) => {
         console.log('ekav nodeic arajin angam kyanqum  uraaaaaaaaa', resp);
         this.openSnackBar();
-
+        this.showSpinner = false;
       }, (error) => {
-
+        this.showSpinner = false;
         console.log('ekav  errorerrorerrorerrorerrorerror ', error);
       });
     } else {
