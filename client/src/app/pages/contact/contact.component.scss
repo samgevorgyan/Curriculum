@@ -1,4 +1,5 @@
 @import "../../../variables";
+
 .contact_cont{
   min-height: calc(100% - 140px);
   background-image: url("../../../assets/images/home/Korea-Wallpaper25.jpg");
@@ -93,6 +94,9 @@ button{
 
 
 ::ng-deep {
+  .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: white;
+  }
   .blue-snackbar{
     background-color: #00c853;
     .mat-simple-snackbar{

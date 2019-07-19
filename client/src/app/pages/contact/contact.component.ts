@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 import {HttpService} from '../../services/http.service';
 import {environment} from '../../../environments/environment';
-import {MatSnackBar} from "@angular/material/snack-bar";
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact',
@@ -14,7 +14,7 @@ export class ContactComponent implements OnInit {
   sendMessage = this.fb.group({
     name_form: ['', [Validators.required]],
     email_form: ['', [Validators.required,
-      Validators.pattern('^[\\w]{1,}[\\w.+-]{0,}@[\\w-]{2,}([.][a-zA-Z]{2,}|[.][\\w-]{2,}[.][a-zA-Z]{2,})$')],],
+      Validators.pattern('^[\\w]{1,}[\\w.+-]{0,}@[\\w-]{2,}([.][a-zA-Z]{2,}|[.][\\w-]{2,}[.][a-zA-Z]{2,})$')], ],
     message_form: ['', [Validators.required]],
   });
   public isSubmitted = false;
@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
               private httpService: HttpService,
-              private _snackBar: MatSnackBar) {
+              private matSnackBar: MatSnackBar) {
   }
 
   get name_form() {
@@ -41,16 +41,11 @@ export class ContactComponent implements OnInit {
     return this.sendMessage.get('message_form');
   }
 
-  onChanges(): void {
-    this.email_form.valueChanges.subscribe(val => {
 
-
-    });
-  }
 
   openSnackBar() {
 
-    this._snackBar.open('your email was sent successfully ', 'ok', {
+    this.matSnackBar.open('your email was sent successfully ', 'ok', {
       duration: 2500,
       panelClass: 'blue-snackbar'
     });
@@ -83,7 +78,6 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
 
-    this.onChanges();
   }
 
 }
