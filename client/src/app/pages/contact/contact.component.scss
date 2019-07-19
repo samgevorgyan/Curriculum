@@ -7,25 +7,33 @@
 
   .info_email{
     padding: 20px;
+    @include for-size(lt-sm){
+      padding: 20px 5px;
+    }
     .get_in_touch{
 
 
       h1{
+        text-align: right;
+        @include for-size(lt-md){
+       text-align: left;
+        }
         span{
-          color: $skills_blue;
+          color: $education_blue;
           font-weight: 900;
         }
       }
       .card{
         height: 50px;
         width: 300px;
+        margin-bottom: 30px;
         a{
           text-decoration: none;
-          color: $skills_blue;
+          color: $education_blue;
 
         }
         span {
-          color: $skills_blue;
+          color: $education_blue;
           margin-right: 10px;
           fa-icon{
           font-size: 50px;
@@ -41,17 +49,32 @@ margin: 0;
 
       .contact_form{
 padding: 16px;
+        @include for-size(lt-md){
+          padding: 0;
+        }
+        .error_field{
+          color: red;
+        }
         input{
-          width: 300px;
-          height: 30px;
+          width: 320px;
+          height: 50px;
           padding: 5px;
+          border-radius: 4px;
+          border: none;
+          //box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
         }
         textarea{
-          width: 300px;
+          width: 320px;
+          padding: 5px;
 
         }
 button{
   width: 150px;
+  background-color: $education_blue ;
+
+  @include for-size(lt-sm){
+    width: 325px;
+  }
 
 }
       }
@@ -62,3 +85,32 @@ button{
   }
 
 }
+::ng-deep {
+  .blue-snackbar{
+    background-color: #00c853;
+    .mat-simple-snackbar{
+      text-align: center;
+      span{
+        width: 100%;
+        text-transform: capitalize;
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+      }
+    }
+    .mat-simple-snackbar-action{
+      display: none;
+    }
+  }
+
+  .mat-form-field-label {
+    color: $education_blue !important;
+    // color: $mainColor!important;
+  }
+
+  .mat-form-field.mat-focused .mat-form-field-label {
+    color: $skills_blue !important;
+    font-weight: 900;
+  }
+}
+
+

@@ -1,8 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatButtonModule, MatIconModule, MatInputModule, MatListModule, MatSidenavModule, MatToolbarModule} from '@angular/material';
+import {
+  MAT_SNACK_BAR_DEFAULT_OPTIONS,
+  MatButtonModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatSidenavModule,
+  MatToolbarModule
+} from '@angular/material';
 import {LayoutModule} from '@angular/cdk/layout';
 import {MatCardModule} from '@angular/material/card';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -15,7 +25,9 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule
+
   ],
   exports: [
     MatInputModule,
@@ -26,7 +38,9 @@ import {MatCardModule} from '@angular/material/card';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule
+
   ]
 })
 export class AppMaterialModule { }

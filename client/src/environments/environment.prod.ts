@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  main_url : 'https://curriculumj.herokuapp.com'
 };

@@ -1,11 +1,11 @@
 <app-header></app-header>
-<div class="contact_cont" fxLayout="row wrap" fxLayout.lt-sm="column" fxFlexAlign="center center">
+<div class="contact_cont" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center center">
 
-  <div class="info_email" fxLayout="column" fxFlexAlign="center center" fxLayoutGap="30px">
-    <div class="get_in_touch" fxLayout="column" fxLayoutGap="30px">
+  <div class="info_email" fxLayout="raw wrap"  fxLayoutAlign="center start"  fxLayoutAlign.lt-sm="center center"  fxLayoutGap="30px" fxLayoutGap.lt-md="0px" >
+    <div class="get_in_touch" fxLayout="column" fxFlexAlign="center center" fxLayoutGap="30px">
       <h1><span>Get </span>in Touch </h1>
-      <div fxLayout="row" fxFlexAlign="center center" fxLayoutGap="30px">
-        <div fxLayout="column" fxFlexAlign="center center" fxLayoutGap="30px">
+      <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutAlign="center center" fxLayoutGap="30px" fxLayoutGap.lt-md="0px">
+        <div fxLayout="column" fxLayoutAlign="center center">
           <mat-card class="card">
             <mat-card-content fxLayout="row" fxFlexAlign="center center">
           <span fxFlexAlign="center">
@@ -31,7 +31,7 @@
 
           </mat-card>
         </div>
-        <div fxLayout="column" fxFlexAlign="center center" fxLayoutGap="30px">
+        <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="30px">
           <mat-card class="card">
             <mat-card-content fxLayout="row" fxFlexAlign="center center">
           <span fxFlexAlign="center">
@@ -45,7 +45,7 @@
 
           </mat-card>
           <mat-card class="card">
-            <mat-card-content fxLayout="row" fxFlexAlign="center center">
+            <mat-card-content fxLayout="row" fxLayoutAlign="center center" fxLayoutAlign.xs="space-evenly center">
      <span>
 
  <a href="https://www.linkedin.com/in/samvel-gevorgyan-35018a121" target="_blank"> <fa-icon [icon]="['fab', 'linkedin']"
@@ -77,22 +77,34 @@
     </div>
 
 
-    <div class="contact_form_div"   >
-      <form  class="contact_form" [formGroup]="sendMessage" (ngSubmit)="onSubmit()"
-        fxLayout="column" fxFlexAlign="center center" fxLayoutGap="30px">
+    <div class="contact_form_div"  >
+      <form class="contact_form" [formGroup]="sendMessage" (ngSubmit)="onSubmit()"
+            fxLayout="column" fxFlexAlign="center center" fxLayoutGap="30px">
         <input type="text" formControlName="name_form" placeholder="Full Name">
-        <input type="email" formControlName="email_form" placeholder="Email address">
-        <textarea formControlName="message_form" name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+<div class="error_field" *ngIf="name_form.touched && name_form.errors?.required  || name_form.errors?.required && isSubmitted">The full name field is required</div>
 
+
+
+          <input matInput placeholder="Email address" formControlName="email_form"  >
+        <div class="error_field" *ngIf="email_form.touched && email_form.errors?.required || email_form.errors?.required && isSubmitted">The email field is required</div>
+        <div class="error_field" *ngIf="email_form.touched && email_form.errors?.pattern" >This email address is not valid</div>
+
+
+        <textarea formControlName="message_form" name="" id="" cols="30" rows="10"
+                  placeholder="Your message"></textarea>
+        <div class="error_field" *ngIf="message_form.touched && message_form.errors?.required  || message_form.errors?.required  && isSubmitted">The message field is required</div>
         <button mat-raised-button color="primary">Send message</button>
       </form>
-    </div>
-  </div>
-  <div class="chat_parent">
-    <div>
 
-    </div>
+
+    </div  >
+
   </div>
+  <!--  <div class="chat_parent">-->
+  <!--    <div>-->
+  <!--ashot-->
+  <!--    </div>-->
+  <!--  </div>-->
 </div>
 
 <app-footer></app-footer>
