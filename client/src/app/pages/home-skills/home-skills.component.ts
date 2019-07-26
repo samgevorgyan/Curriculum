@@ -16,14 +16,14 @@ export class HomeSkillsComponent implements OnInit {
   showCirclePhp  = false;
   showCircleJava  = false;
   showCircleJquery  = false;
-  @ViewChild('ff', {static : false}) ff: any;
+
 
   public ngCircleOptions: any = {
 
     radius: '80',
-    outerStrokeWidth: '10',
-    innerStrokeWidth: '10',
-    space: -10,
+    outerStrokeWidth: '7',
+    innerStrokeWidth: '7',
+    space: -7,
     outerStrokeColor: '#1c2a5e',
     outerStrokeGradient: true,
     outerStrokeGradientStopColor: '#53a9ff',
@@ -35,7 +35,7 @@ export class HomeSkillsComponent implements OnInit {
     subtitleColor: 'black',
     titleColor: 'black',
     unitsColor: 'black',
-    subtitleFontSize: '22px',
+    subtitleFontSize: '20px',
 
 
   };

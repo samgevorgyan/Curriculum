@@ -12,9 +12,11 @@ min-height: 300px;
     text-transform: uppercase ;
   }
   .html_css{
- @include box_style;
+ //@include box_style;
     //background-color: red;
     //min-height: 1000px;
+    border-top: 1px solid #dfe1e5;
+    border-bottom: 1px solid #dfe1e5;
 
     .standard{
       height: 250px;

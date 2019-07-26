@@ -1,9 +1,10 @@
+@import "../../../variables";
 .sidenav-container {
-  overflow: initial!important;
+  overflow: initial !important;
   height: 100%;
-background-color: black;
+  background-color: black;
 
-  .mat-drawer-backdrop{
+  .mat-drawer-backdrop {
     height: 100vh;
     position: fixed;
   }
@@ -16,49 +17,63 @@ background-color: black;
       height: auto;
       padding: 10px 10px;
 
-      .my_logo{
+      .my_logo {
         width: 126px;
         height: 150px;
         border-radius: 50%;
       }
-      .name_surname{
+
+      .name_surname {
         color: lime;
       }
 
     }
   }
-  .mat-drawer-content{
-    .mat-toolbar{
+
+  .mat-drawer-content {
+    .fixedNav{
       position: fixed;
       z-index: 2;
-//background-color: #101990;
+    }
+    .mat-toolbar {
+
+      //background-color: #101990;
       background: transparent;
 
       color: white;
 
-.pdf{
-  a {
-  text-decoration: none;
-  color: inherit;
-}
-}
+      .pdf {
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
 
-.links_div{
- margin-left: auto;
-  a{
-    text-decoration: none;
-    color: hsla(0,0%,100%,.65);
+      .links_div {
+        margin-left: auto;
 
-
-    &:hover{
-      color: #fff;
-    }
+        a {
+          text-decoration: none;
+          color: hsla(0, 0%, 100%, .65);
 
 
-  }
+          &:hover {
+            color: #fff;
+          }
 
-}
 
+        }
+      }
+
+      .menuItemsBlue {
+        a {
+          color: #101990;
+
+          &:hover {
+            color: $skills_blue;
+          }
+        }
+      }
     }
 
   }
