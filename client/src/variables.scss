@@ -2,6 +2,7 @@
 $education_blue : #2b1df2;
 $skills_blue : #110c60;
 $skills_background_blue : #2b1df24a;
+$text_dark : #050A30;
 
 //fonts
 
@@ -11,7 +12,11 @@ $skills_background_blue : #2b1df24a;
 
 //static designes
 
-
+@mixin box_style  {
+  border: 1px solid #dfe1e5;
+  border-radius: 8px;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
 
 @mixin animation_width($name ,$width){
 

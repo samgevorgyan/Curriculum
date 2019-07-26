@@ -3,9 +3,12 @@
 .jobs_cont {
   padding: 50px;
   font-family: 'Playfair Display', serif;
+  background-image: url("../../../assets/images/home/waveFooter.webp");
+  background-color: #101990;
+  background-repeat: no-repeat;
 
   h1 {
-    color: white;
+    color: $text_dark;
   }
   a{
     text-decoration: none ;
@@ -13,17 +16,26 @@
 
 
   .cards {
+a{
+  @include for-size(lt-md){
+    margin-right: 0!important;
 
+  }
+}
     .example-card {
-      max-width: 400px;
-      min-width: 250px;
-      background-color: #31e8f170;
+      width: 400px;
+      background-color: #121d12c2;
       margin-bottom: 25px;
-      @include for-size(lt-sm){
+      font-family: 'Playfair Display', serif;
+      line-height: 1.3rem;
+      @include for-size(lt-md){
         margin-left: 0;
+        max-width: 300px;
       }
 
-
+      mat-card-title,mat-card-subtitle{
+        color: white;
+      }
       .vshoo_image {
         background-image: url('../../../assets/images/home/vshoo.png');
         background-size: contain;
@@ -33,7 +45,8 @@
         background-image: url('../../../assets/images/home/connecttotv_logo.png');
         background-size: contain;
         background-repeat: no-repeat;
-        width: 100px;
+        width: 120px;
+        border-radius: 0;
       }
 
       .my_cash_image {
@@ -47,7 +60,8 @@
         background-image: url('../../../assets/images/home/wallet.png');
         background-size: contain;
         background-repeat: no-repeat;
-        width: 100px;
+        width: 120px;
+        border-radius: 0;
       }
 
       .sec_image {
@@ -58,7 +72,8 @@
       }
       .mat_content_p {
         color: white;
-        line-height: 1.3rem;
+        line-height: 1.5rem;
+        font-size: 1.2rem;
       }
     }
   }

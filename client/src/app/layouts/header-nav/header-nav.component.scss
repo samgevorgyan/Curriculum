@@ -2,6 +2,7 @@
   overflow: initial!important;
   height: 100%;
 background-color: black;
+
   .mat-drawer-backdrop{
     height: 100vh;
     position: fixed;
@@ -28,16 +29,32 @@ background-color: black;
   }
   .mat-drawer-content{
     .mat-toolbar{
+      position: fixed;
+      z-index: 2;
+//background-color: #101990;
+      background: transparent;
 
-background: transparent;
       color: white;
 
+.pdf{
+  a {
+  text-decoration: none;
+  color: inherit;
+}
+}
 
 .links_div{
  margin-left: auto;
   a{
     text-decoration: none;
-    color: white;
+    color: hsla(0,0%,100%,.65);
+
+
+    &:hover{
+      color: #fff;
+    }
+
+
   }
 
 }

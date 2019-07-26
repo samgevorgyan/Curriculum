@@ -6,30 +6,36 @@ import {Component, OnInit, ViewChild} from '@angular/core';
   styleUrls: ['./home-skills.component.scss']
 })
 export class HomeSkillsComponent implements OnInit {
-  show_circle_css3  = false;
-  show_circle_html5  = false;
-  show_circle_js  = false;
-  show_circle_angular  = false;
-  show_circle_php  = false;
+  showCircleHtml5  = false;
+  showCircleCss3  = false;
+  showCircleBootstrap  = false;
+  showCircleJs  = false;
+  showCircleAngular  = false;
+  showCircleMaterial = false;
+  showCircleFlex = false;
+  showCirclePhp  = false;
+  showCircleJava  = false;
+  showCircleJquery  = false;
   @ViewChild('ff', {static : false}) ff: any;
+
   public ngCircleOptions: any = {
 
-    radius: '100',
+    radius: '80',
     outerStrokeWidth: '10',
     innerStrokeWidth: '10',
     space: -10,
     outerStrokeColor: '#1c2a5e',
     outerStrokeGradient: true,
     outerStrokeGradientStopColor: '#53a9ff',
-    innerStrokeColor: 'white',
+    innerStrokeColor: '#dfe1e5',
     animation: true,
     animationDuration: '300',
     renderOnClick: true,
     lazy: false,
-    subtitleColor: '#ffffff',
-    titleColor: '#ffffff',
-    unitsColor: '#ffffff',
-    subtitleFontSize: '32px',
+    subtitleColor: 'black',
+    titleColor: 'black',
+    unitsColor: 'black',
+    subtitleFontSize: '22px',
 
 
   };
@@ -47,11 +53,17 @@ export class HomeSkillsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.showCircles('html5', 'show_circle_html5');
-    this.showCircles('css3', 'show_circle_css3');
-    this.showCircles('js', 'show_circle_js');
-    this.showCircles('angular', 'show_circle_angular');
-    this.showCircles('php', 'show_circle_php');
+    this.showCircles('html5', 'showCircleHtml5');
+    this.showCircles('css3', 'showCircleCss3');
+    this.showCircles('bootstrap', 'showCircleBootstrap');
+    this.showCircles('js', 'showCircleJs');
+    this.showCircles('jquery', 'showCircleJquery');
+    this.showCircles('angular', 'showCircleAngular');
+    this.showCircles('material', 'showCircleMaterial');
+    this.showCircles('flex', 'showCircleFlex');
+    this.showCircles('php', 'showCirclePhp');
+    this.showCircles('java', 'showCircleJava');
+
 
 
 

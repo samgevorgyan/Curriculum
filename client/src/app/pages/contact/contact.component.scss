@@ -3,10 +3,8 @@
 .contact_cont{
   min-height: calc(100% - 140px);
   background-image: url("../../../assets/images/home/contact1.jpg");
-  background-size: contain;
-  @include for-size(lt-md){
-    background-size: cover;
-  }
+  background-size: cover;
+
 
 
   .info_email{

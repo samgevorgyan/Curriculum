@@ -1,16 +1,16 @@
 <div class="skills_content">
-  <div class="html_css"  id="trigger-html" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center center"
-  >
+  <h1 data-aos="flip-left"> Technical skills</h1>
+  <div class="html_css"  id="trigger-first" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center center" >
 
-    <div class="standart" data-aos="zoom-in-up"
+    <div class="standard" data-aos="zoom-in-up"
          data-aos-id="html5"
          data-aos-delay="50"
-         id="trigger-css"
-         data-aos-anchor="#trigger-html"
+         id="trigger-html"
+         data-aos-anchor="#trigger-first"
          data-aos-anchor-placement="top-bottom"
     >
       <circle-progress
-        *ngIf="show_circle_html5"
+        *ngIf="showCircleHtml5"
         [options]="ngCircleOptions"
         [percent]=85
         [subtitle]="'HTML 5'"
@@ -18,32 +18,66 @@
       ></circle-progress>
     </div>
 
-    <div class="standart" data-aos="zoom-in-up"
+    <div class="standard" data-aos="zoom-in-up"
          data-aos-id="css3"
          data-aos-delay="50"
-         id="trigger-js"
-         data-aos-anchor="#trigger-css"
+         id="trigger-css"
+         data-aos-anchor="#trigger-html"
          data-aos-anchor-placement="top-center">
 
       <circle-progress
-        *ngIf="show_circle_css3"
+        *ngIf=" showCircleCss3"
         [options]="ngCircleOptions"
         [percent]=85
         [subtitle]="'CSS 3'"
       ></circle-progress>
     </div>
 
-
-    <div class="standart" data-aos="zoom-in-up"
-         data-aos-id="js"
+    <div class="standard" data-aos="zoom-in-up"
+         data-aos-id="sass"
          data-aos-delay="50"
-         id="trigger-angular"
-         data-aos-anchor="#trigger-js"
+         id="trigger-sass"
+         data-aos-anchor="#trigger-css"
          data-aos-anchor-placement="top-center"
     >
 
       <circle-progress
-        *ngIf="show_circle_js"
+        *ngIf=" showCircleBootstrap"
+        [options]="ngCircleOptions"
+        [percent]=85
+        [subtitle]="'SASS/LESS'"
+
+      ></circle-progress>
+    </div>
+
+    <div class="standard" data-aos="zoom-in-up"
+         data-aos-id="bootstrap"
+         data-aos-delay="50"
+         id="trigger-bootstrap"
+         data-aos-anchor="#trigger-sass"
+         data-aos-anchor-placement="top-center"
+    >
+
+      <circle-progress
+        *ngIf="showCircleBootstrap"
+        [options]="ngCircleOptions"
+        [percent]=70
+        [subtitle]="'BOOTSTRAP'"
+
+      ></circle-progress>
+    </div>
+
+
+    <div class="standard" data-aos="zoom-in-up"
+         data-aos-id="js"
+         data-aos-delay="50"
+         id="trigger-js"
+         data-aos-anchor="#trigger-bootstrap"
+         data-aos-anchor-placement="top-center"
+    >
+
+      <circle-progress
+        *ngIf="showCircleJs"
         [options]="ngCircleOptions"
         [percent]=75
         [subtitle]="'JAVASCRIPT'"
@@ -51,16 +85,33 @@
     </div>
 
 
-    <div class="standart" data-aos="zoom-in-up"
-         data-aos-id="angular"
+    <div class="standard" data-aos="zoom-in-up"
+         data-aos-id="jquery"
          data-aos-delay="50"
-         id="trigger-php"
-         data-aos-anchor="#trigger-angular"
+         id="trigger-jquery"
+         data-aos-anchor="#trigger-js"
          data-aos-anchor-placement="top-center"
     >
 
       <circle-progress
-        *ngIf="show_circle_angular"
+        *ngIf="showCircleJquery"
+        [options]="ngCircleOptions"
+        [percent]=75
+        [subtitle]="['JQUERY / ','JQUERY UI']"
+
+      ></circle-progress>
+    </div>
+
+    <div class="standard" data-aos="zoom-in-up"
+         data-aos-id="angular"
+         data-aos-delay="50"
+         id="trigger-angular"
+         data-aos-anchor="#trigger-jquery"
+         data-aos-anchor-placement="top-center"
+    >
+
+      <circle-progress
+        *ngIf="showCircleAngular"
         [options]="ngCircleOptions"
         [percent]=75
         [subtitle]="'ANGULAR'"
@@ -68,21 +119,80 @@
       ></circle-progress>
     </div>
 
-    <div class="standart" data-aos="zoom-in-up"
+
+    <div class="standard" data-aos="zoom-in-up"
+         data-aos-id="material"
+         data-aos-delay="50"
+         id="trigger-material"
+         data-aos-anchor="#trigger-angular"
+         data-aos-anchor-placement="top-center"
+    >
+
+      <circle-progress
+        *ngIf="showCircleMaterial"
+        [options]="ngCircleOptions"
+        [percent]=75
+        [subtitle]="['ANGULAR','MATERIAL']"
+
+      ></circle-progress>
+    </div>
+
+
+    <div class="standard" data-aos="zoom-in-up"
+         data-aos-id="flex"
+         data-aos-delay="50"
+         id="trigger-flex"
+         data-aos-anchor="#trigger-material"
+         data-aos-anchor-placement="top-center"
+    >
+
+      <circle-progress
+        *ngIf="showCircleFlex"
+        [options]="ngCircleOptions"
+        [percent]=89
+        [subtitle]="['ANGULAR','FLEX-LAYOUT']"
+
+      ></circle-progress>
+    </div>
+
+
+
+    <div class="standard" data-aos="zoom-in-up"
          data-aos-id="php"
          data-aos-delay="50"
+         id="trigger-php"
+         data-aos-anchor="#trigger-flex"
+         data-aos-anchor-placement="top-center"
+    >
+
+      <circle-progress
+        *ngIf="showCirclePhp"
+        [options]="ngCircleOptions"
+        [percent]=42
+        [subtitle]="'PHP'"
+
+      ></circle-progress>
+    </div>
+
+    <div class="standard" data-aos="zoom-in-up"
+         data-aos-id="java"
+         data-aos-delay="50"
+         id="trigger-java"
          data-aos-anchor="#trigger-php"
          data-aos-anchor-placement="top-center"
     >
 
       <circle-progress
-        *ngIf="show_circle_php"
+        *ngIf="showCircleJava"
         [options]="ngCircleOptions"
         [percent]=30
-        [subtitle]="'PHP'"
+        [subtitle]="'JAVA / JSP'"
 
       ></circle-progress>
     </div>
+
+
+
 
 
   </div>

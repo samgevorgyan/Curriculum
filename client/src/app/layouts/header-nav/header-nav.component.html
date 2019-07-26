@@ -4,7 +4,7 @@
       [mode]=" 'over'"
      >
     <mat-toolbar fxLayout="column">
-      <img class="my_logo"[src]="'assets/images/home/sam.png'" alt="logo">
+      <img class="my_logo"[src]="'assets/images/home/sam.jpg'" alt="logo">
     <p class="name_surname">SAMVEL GEVORGYAN</p>
     </mat-toolbar>
     <div>
@@ -26,11 +26,11 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Curriculum</span>
+      <span class="pdf"><a href="../../../assets/documents/SAMVEL CV.pdf" download>DOWNLOAD CV</a></span>
       <div class="links_div" fxLayout="row" fxLayoutGap="15px" *ngIf="!(isHandset$ | async)" >
-        <a mat-list-item routerLink="/home">HOME</a>
-        <a mat-list-item routerLink="/education">EDUCATION</a>
-        <a mat-list-item routerLink="/contact">CONTACTS</a>
+        <a mat-button  routerLink="/home">Home</a>
+        <a mat-button routerLink="/education">Education</a>
+        <a mat-button routerLink="/contact">Contacts</a>
 
       </div>
     </mat-toolbar>

@@ -1,21 +1,43 @@
 @import "../../../variables";
-.about_me_content{
+
+.about_me_content {
   padding: 2px;
   min-height: 600px;
 
+  .about_me_animate {
 
-  .about_me_animate{
-    color: white;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+width: 50%;
+    border: 1px solid #dfe1e570;
+    min-width: 300px;
+    border-radius: 8px;
+    background-image: url("../../../assets/images/home/gerey_hello.jpg");
+    background-attachment: fixed;
+    background-size: cover
+  ;
+
+    //@include for-size(lt-sm){
+    //  color: white;
+    //  box-shadow: none;
+    //}
     //opacity: 0;
-    h2{
+
+    h1 {
+      color: white;
+      font-family: 'Playfair Display', serif;
     }
 
-    p{
-     min-width: 320px;
+    p {
+
+      color: white;
+      min-width: 280px;
       width: 60%;
       font-size: 1.5rem;
-   line-height: 3rem;
-      font-family: 'Playfair Display', serif;
+      line-height: 3rem;
+      font-family: monospace;
+      @include  for-size(lt-sm){
+        padding: 5px;
+      }
     }
   }
 }

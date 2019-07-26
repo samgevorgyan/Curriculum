@@ -9,18 +9,27 @@ overflow-x: hidden;
     color: white;
   }
   .first_part {
-    background-image: url("../../../assets/images/home/home_universe.jpg");
-    background-size: cover;
+    background-image: url("../../../assets/images/home/wave.webp");
+background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    //background-color: #0000FF;
+    background-color: #101990;
     width: 100%;
     min-height: 800px;
     position: relative;
+    //@include for-size(lt-sm){
+    //  background-image: url("../../../assets/images/home/home_universe.jpg");
+    //  background-size: contain;
+    //}
     .img_text_div {
       padding: 20px;
 
       .my_img {
+        text-align: center;
         .my_logo {
-          width: 400px;
-          height: 445px;
+          width: 300px;
+          height: 345px;
           border-radius: 50%;
           position: relative;
           @include for-size(md) {
@@ -31,6 +40,9 @@ overflow-x: hidden;
             width: 200px;
             height: 235px;
           }
+        }
+        h2{
+          color: white;
         }
       }
 
@@ -61,14 +73,14 @@ overflow-x: hidden;
   }
 
   .experience_education{
-    background-image: url("../../../assets/images/home/background1.jpg");
+    //background-image: url("../../../assets/images/home/background1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    @include for-size(lt-sm){
-      background-image: url("../../../assets/images/home/homeEducationMobile.gif");
-      background-size: contain;
-      background-repeat: repeat;
-    }
+    //@include for-size(lt-sm){
+    //  background-image: url("../../../assets/images/home/homeEducationMobile.gif");
+    //  background-size: contain;
+    //  background-repeat: repeat;
+    //}
 
 
   }

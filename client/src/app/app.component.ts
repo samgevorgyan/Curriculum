@@ -13,10 +13,10 @@ import {slideInAnimation} from './app.animation';
 
 })
 export class AppComponent {
-  title = 'Curriculum';
+  title = 'SAM';
 
   prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 }
 

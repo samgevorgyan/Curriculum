@@ -1,14 +1,22 @@
 @import "../../../variables";
 .skills_content{
+
 min-height: 300px;
+
+
   //background: #3f58bc;
   //background: linear-gradient(90deg, #3f58bc 6%, #0f193a 100%);
   padding: 20px;
-
+  h1{
+    color: $text_dark;
+    text-transform: uppercase ;
+  }
   .html_css{
+ @include box_style;
     //background-color: red;
     //min-height: 1000px;
-    .standart{
+
+    .standard{
       height: 250px;
     }
 .for_scroll{
