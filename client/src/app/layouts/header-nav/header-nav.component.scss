@@ -34,6 +34,7 @@
     .fixedNav{
       position: fixed;
       z-index: 2;
+
     }
     .mat-toolbar {
 
@@ -64,9 +65,11 @@
 
         }
       }
-
+.matIcon{
+  color: #101990;
+}
       .menuItemsBlue {
-        a {
+        a{
           color: #101990;
 
           &:hover {

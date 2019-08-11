@@ -10,7 +10,8 @@ background-image: url("../../../assets/images/home/education.png");
   padding: 20px;
   position: relative;
 @include for-size(lt-md){
-  background-size: cover;
+  background-size: cover
+;
 }
 
 h1{

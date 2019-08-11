@@ -28,6 +28,7 @@ a{
       margin-bottom: 25px;
       font-family: 'Playfair Display', serif;
       line-height: 1.3rem;
+      min-height: 160px;
       @include for-size(lt-md){
         margin-left: 0;
         max-width: 300px;

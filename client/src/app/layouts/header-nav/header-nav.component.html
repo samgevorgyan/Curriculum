@@ -24,9 +24,9 @@
         mat-icon-button
         (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon [ngClass]="{'matIcon' : menuItemsBlue}" aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="pdf" [ngClass]="{'menuItemsBlue' : menuItemsBlue}"><a href="../../../assets/documents/SAMVEL CV.pdf" download>DOWNLOAD CV</a></span>
+      <span class="pdf" [ngClass]="{'menuItemsBlue' : menuItemsBlue}"><a href="../../../assets/documents/cv.pdf" download>DOWNLOAD CV</a></span>
       <div class="links_div" [ngClass]="{'menuItemsBlue' : menuItemsBlue}" fxLayout="row" fxLayoutGap="15px" *ngIf="!(isHandset$ | async)" >
         <a mat-button  routerLink="/home">Home</a>
         <a mat-button routerLink="/education">Education</a>
