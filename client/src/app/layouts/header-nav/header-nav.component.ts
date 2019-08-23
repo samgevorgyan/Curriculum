@@ -1,7 +1,7 @@
 import {Component, HostListener, Input, ViewEncapsulation} from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-header-nav',
@@ -12,34 +12,36 @@ import { map } from 'rxjs/operators';
 export class HeaderNavComponent {
 
   @Input() environment: string;
-public menuItemsBlue = false;
+  @Input() position: string;
+  public menuItemsBlue = false;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches
-
-
       )
     );
 
   constructor(private breakpointObserver: BreakpointObserver) {
-      }
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
 
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (this.environment === 'home') {
-      if (scrollPosition > 500) {
-        console.log('You are 100px from the top to bottom');
-        this.menuItemsBlue = true;
-      } else {
-        console.log('You are eeeeeeeeeeeeeeeeeeee from the top to bottom');
-        this.menuItemsBlue = false;
-      }
+    if (this.environment === 'home' && this.getIsHandset()) {
+      this.makeDownloadBlue(this.position);
+    } else {
+      this.makeDownloadBlue(this.position);
     }
 
 
   }
 
+  getIsHandset() {
+    return this.breakpointObserver.isMatched('(max-width: 599px)');
+  }
+
+  makeDownloadBlue(position) {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.menuItemsBlue = scrollPosition > position;
+  }
 
 }

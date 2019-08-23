@@ -3,6 +3,7 @@ import {FormBuilder, Validators} from '@angular/forms';
 import {HttpService} from '../../services/http.service';
 import {environment} from '../../../environments/environment';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-contact',
@@ -22,7 +23,17 @@ export class ContactComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
               private httpService: HttpService,
-              private matSnackBar: MatSnackBar) {
+              private matSnackBar: MatSnackBar,
+              private titleService: Title,
+              private meta: Meta) {
+    this.titleService.setTitle('Contact Sam cv ');
+    this.meta.addTags([
+      { name: 'SAMCVNET', content: 'SAMVEL GEVORGYAN' },
+      { name: 'CONTACT', content: 'SAMVEL GEVORGYAN CONTACT' }
+    ], true);
+
+    this.meta.updateTag({ name: 'SAMCVNET', content: 'qachal' });
+    this.meta.updateTag({ name: 'theme-color', content: '#000000' });
   }
 
   get name_form() {

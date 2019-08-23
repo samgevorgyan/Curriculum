@@ -1,4 +1,6 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import {BreakpointObserver} from '@angular/cdk/layout';
+import {Meta, Title} from "@angular/platform-browser";
 
 declare var anime: any;
 
@@ -10,7 +12,9 @@ declare var anime: any;
 
 })
 export class HomeComponent implements OnInit {
-
+  public position: string;
+  @ViewChild('about', {static: false}) about: ElementRef;
+  @ViewChild('skills', {static: false}) skills: ElementRef;
   myStyle: object = {
     width: '100%',
     height: '100%',
@@ -21,7 +25,6 @@ export class HomeComponent implements OnInit {
     bottom: 0,
     position: 'absolute'
   };
-
   myParams: object = {
     particles: {
       number: {value: 70, density: {enable: false, value_area: 1000}},
@@ -59,28 +62,52 @@ export class HomeComponent implements OnInit {
     },
     retina_detect: true
 
-};
+  };
 
-constructor() {
+  constructor(private breakpointObserver: BreakpointObserver,
+              private titleService: Title,
+              private meta: Meta) {
 
-}
+    this.titleService.setTitle('Info Sam cv');
+    this.meta.addTags([
+      { name: 'SAMCVNET', content: 'SAMVEL GEVORGYAN' },
+      { name: 'INFO', content: 'SAMVEL GEVORGYAN INFO' }
+    ], true);
+    this.meta.updateTag({ name: 'theme-color', content: '#101990' });
+  }
 
-animateText() {
-  anime.timeline({loop: false})
-    .add({
-      targets: '.ml15 .word',
-      scale: [14, 1],
-      opacity: [0, 1],
-      duration: 1500,
-    });
+  getIsHandset() {
+    return this.breakpointObserver.isMatched('(max-width: 599px)');
+  }
 
-}
+  setPosition() {
+    setTimeout(() => {
+      if (this.getIsHandset()) {
+        this.position = this.skills.nativeElement.offsetTop;
+      } else {
+        this.position = this.about.nativeElement.offsetTop;
+      }
+
+    },);
+
+  }
+
+  animateText() {
+    anime.timeline({loop: false})
+      .add({
+        targets: '.ml15 .word',
+        scale: [14, 1],
+        opacity: [0, 1],
+        duration: 1500,
+      });
+
+  }
 
 
-ngOnInit() {
-  this.animateText();
+  ngOnInit() {
+    this.animateText();
+    this.setPosition();
 
-
-}
+  }
 
 }

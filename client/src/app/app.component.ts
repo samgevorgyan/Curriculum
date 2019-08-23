@@ -13,9 +13,10 @@ import {slideInAnimation} from './app.animation';
 
 })
 export class AppComponent {
-  title = 'SAM';
+  constructor( ) {
 
-  prepareRoute(outlet: RouterOutlet) {
+  }
+  prepareRoute(outlet: RouterOutlet ) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 }

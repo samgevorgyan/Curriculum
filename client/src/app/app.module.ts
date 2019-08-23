@@ -29,9 +29,12 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { EducationComponent } from './pages/education/education.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpService} from "./services/http.service";
-import {ConvertToHttpParamsService} from "./services/convert-to-http-params.service";
-import {HttpClientModule} from "@angular/common/http";
+import {HttpService} from './services/http.service';
+import {ConvertToHttpParamsService} from './services/convert-to-http-params.service';
+import {HttpClientModule} from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 library.add(fas, far, fab);
@@ -52,7 +55,7 @@ library.add(fas, far, fab);
 
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
@@ -70,7 +73,9 @@ library.add(fas, far, fab);
       animationDuration: 300,
     }),
     ParallaxScrollModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 
   ],
   providers: [

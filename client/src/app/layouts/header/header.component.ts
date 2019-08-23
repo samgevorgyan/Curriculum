@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
  @Input() environment: string;
+ @Input() position: string;
 
   ngOnInit() {
   }

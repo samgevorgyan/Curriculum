@@ -2,7 +2,7 @@
 <div class="main_content" >
   <div class="first_part">
 
-    <app-header [environment] = "'home'">
+    <app-header [environment] = "'home'" [position]="position">
 
     </app-header>
     <particles [params]="myParams" [style]="myStyle"> </particles>
@@ -29,8 +29,10 @@
 
 
   </div>
-  <app-home-about></app-home-about>
-  <div class="experience_education" >
+  <div #about>
+  <app-home-about   ></app-home-about>
+  </div>
+  <div class="experience_education" #skills >
   <app-home-skills> </app-home-skills>
 
   <app-home-experience></app-home-experience>
