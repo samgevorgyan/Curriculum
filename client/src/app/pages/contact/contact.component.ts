@@ -3,7 +3,7 @@ import {FormBuilder, Validators} from '@angular/forms';
 import {HttpService} from '../../services/http.service';
 import {environment} from '../../../environments/environment';
 import {MatSnackBar} from '@angular/material/snack-bar';
-import {Meta, Title} from "@angular/platform-browser";
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',

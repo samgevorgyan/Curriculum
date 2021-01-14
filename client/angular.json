@@ -129,7 +129,7 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/server",
-            "main": "src/main.server.ts",
+            "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
@@ -147,10 +147,38 @@
               }
             }
           }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "Curriculum:build",
+            "serverTarget": "Curriculum:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "Curriculum:build:production",
+              "serverTarget": "Curriculum:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "Curriculum:build:production",
+            "serverTarget": "Curriculum:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
+          }
         }
-
       }
     }
   },
-  "defaultProject": "Curriculum"
+  "defaultProject": "Curriculum",
+  "cli": {
+    "analytics": "f3858706-95d7-4f11-b37e-d7e1b5504c0a"
+  }
 }

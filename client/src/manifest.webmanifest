@@ -6,7 +6,7 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "description": "SAMVEL GEVORGYAN CV"
+  "description": "SAMVEL GEVORGYAN CV",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
@@ -38,7 +38,11 @@
       "sizes": "192x192",
       "type": "image/png"
     },
-
+    {
+      "src": "assets/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
     {
       "src": "assets/icons/icon-512x512.png",
       "sizes": "512x512",
